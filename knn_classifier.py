@@ -34,7 +34,7 @@ def knn_classifier(data, label):
         print(classification_report(y_test, y_pred))
         print(accuracy_score(y_test, y_pred)*100)
 
-if __name__ == '__main__':
+def run_knn_classifier():
     # call the function knn_classifier()
     print("VALENCE \n")
     knn_classifier(x_vals, y_vals_0)

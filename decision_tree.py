@@ -38,8 +38,8 @@ def decision_tree(data, label):
     print(classification_report(y_test, y_pred))
     print(accuracy_score(y_test, y_pred))
 
-if __name__ == '__main__':
-    # call the function knn_classifier()
+def run_decision_tree():
+    # call the function decision_tree()
     print("VALENCE \n")
     decision_tree(x_vals, y_vals_0)
     print("AROUSAL \n")

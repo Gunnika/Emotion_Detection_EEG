@@ -40,8 +40,8 @@ def svm_pca_classifier(data,label):
     print(classification_report(y_test, y_pred)) ### evaluate performance
     print(accuracy_score(y_test, y_pred)*100) ### evaluate performance
 
-if __name__ == '__main__':
-    # call the function knn_classifier()
+def run_svm_pca_classifier():
+    # call the function svm_pca_classifier()
     print("VALENCE \n")
     svm_pca_classifier(x_vals, y_vals_0)
     print("AROUSAL \n")
