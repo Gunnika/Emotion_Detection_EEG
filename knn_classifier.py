@@ -11,8 +11,8 @@ y_2 = 'data/labels_class_2.dat'
 y_3 = 'data/labels_class_3.dat'
 
 #load data from text file in numpy array
-x_vals = np.genfromtxt(x, delimiter=' ')
-y_vals_0 = np.genfromtxt(y_0, delimiter=' ')
+x_vals = np.loadtxt(x)
+y_vals_0 = np.loadtxt(y_0)
 y_vals_1 = np.loadtxt(y_1)
 y_vals_2 = np.loadtxt(y_2)
 y_vals_3 = np.loadtxt(y_3)
