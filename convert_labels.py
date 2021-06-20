@@ -13,7 +13,7 @@ def convertLabels():
             else:
                 conv_labels_0.write(str(0) + "\n")
     conv_labels_0.close()
-    print(" Encoded label 0"+"\n")
+    print(" Encoded label 0 - Valence"+"\n")
 
     with open('data/labels_1.dat', 'r') as f:
         for val in f:
@@ -22,7 +22,7 @@ def convertLabels():
             else:
                 conv_labels_1.write(str(0) + "\n")
     conv_labels_1.close()
-    print(" Encoded label 1"+"\n")
+    print(" Encoded label 1 - Arousal"+"\n")
 
     with open('data/labels_2.dat', 'r') as f:
         for val in f:
@@ -31,7 +31,7 @@ def convertLabels():
             else:
                 conv_labels_2.write(str(0) + "\n")
     conv_labels_2.close()
-    print(" Encoded label 2"+"\n")
+    print(" Encoded label 2 - Dominance"+"\n")
 
     with open('data/labels_3.dat', 'r') as f:
         for val in f:
@@ -40,7 +40,7 @@ def convertLabels():
             else:
                 conv_labels_3.write(str(0) + "\n")
     conv_labels_3.close()
-    print(" Encoded label 3"+"\n")
+    print(" Encoded label 3 - Liking"+"\n")
 if __name__=="__main__":
     convertLabels()
 

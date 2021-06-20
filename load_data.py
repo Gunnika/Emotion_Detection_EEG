@@ -27,9 +27,7 @@ def convertData():
         fname = 'data/s'+str(name)+'.dat'
 
         # read file using pickle module in Binary mode
-        f = open(fname,'rb')
-        # load data with Latin1 encoding
-        data = pickle.load(f,encoding='latin1')     
+        data = pickle.load(open(fname,'rb'), encoding='latin1')    
         print(fname)
 
     # Extracting labels from data
@@ -43,12 +41,15 @@ def convertData():
                             # storing channel number with that channel's data
                             file_data.write(str(ch+1) + " ");
                             file_data.write(str(data['data'][tr][ch][t]) + " ");
-                    #saving label of each trial
-                    file_labels0.write(str(data['labels'][tr][0]) + "\n");
-                    file_labels1.write(str(data['labels'][tr][1]) + "\n");
-                    file_labels2.write(str(data['labels'][tr][2]) + "\n");
-                    file_labels3.write(str(data['labels'][tr][3]) + "\n");
-                    file_data.write("\n");
+
+                #saving label of each trial
+                file_labels0.write(str(data['labels'][tr][0]) + "\n");
+                file_labels1.write(str(data['labels'][tr][1]) + "\n");
+                file_labels2.write(str(data['labels'][tr][2]) + "\n");
+                file_labels3.write(str(data['labels'][tr][3]) + "\n");
+
+            file_data.write("\n");
+                    
 
     # Close all files
     file_labels0.close()

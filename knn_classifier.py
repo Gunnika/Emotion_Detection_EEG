@@ -11,8 +11,8 @@ y_2 = 'data/labels_class_2.dat'
 y_3 = 'data/labels_class_3.dat'
 
 #load data from text file in numpy array
-x_vals = np.loadtxt(x)
-y_vals_0 = np.loadtxt(y_0)
+x_vals = np.genfromtxt(x, delimiter=' ')
+y_vals_0 = np.genfromtxt(y_0, delimiter=' ')
 y_vals_1 = np.loadtxt(y_1)
 y_vals_2 = np.loadtxt(y_2)
 y_vals_3 = np.loadtxt(y_3)
@@ -36,9 +36,13 @@ def knn_classifier(data, label):
 
 if __name__ == '__main__':
     # call the function knn_classifier()
+    print("VALENCE \n")
     knn_classifier(x_vals, y_vals_0)
+    print("AROUSAL \n")
     knn_classifier(x_vals, y_vals_1)
+    print("DOMINANCE \n")
     knn_classifier(x_vals, y_vals_2)
+    print("LIKING \n")
     knn_classifier(x_vals, y_vals_3)
-    
+
 
